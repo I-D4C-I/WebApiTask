@@ -1,0 +1,169 @@
+@WebApiTask_HostAddress = https://localhost:7025
+
+###
+GET {{WebApiTask_HostAddress}}/api/drillblock
+
+###
+
+POST {{WebApiTask_HostAddress}}/api/drillblock
+Content-Type: application/json
+
+{
+  "name":"hawaii",
+  "updatedate": "2024-03-02T17:58:30.9607985\u002B07:00"
+}
+
+###
+
+GET {{WebApiTask_HostAddress}}/api/drillblock/1
+
+###
+
+GET {{WebApiTask_HostAddress}}/api/drillblock/-1
+###
+
+PUT {{WebApiTask_HostAddress}}/api/drillblock/2
+Content-Type: application/json
+
+{
+  "id": 2,
+  "name": "London",
+  "updateDate": "2024-03-02T17:58:30.9607985\u002B07:00"
+}
+
+###
+PUT {{WebApiTask_HostAddress}}/api/drillblock/-1
+Content-Type: application/json
+
+{
+  "id": 2,
+  "name": "London",
+  "updateDate": "2024-03-02T17:58:30.9607985\u002B07:00"
+}
+
+###
+
+PUT {{WebApiTask_HostAddress}}/api/drillblock/-1
+Content-Type: application/json
+
+{
+  "id": -1,
+  "name": "London",
+  "updateDate": "2024-03-02T17:58:30.9607985\u002B07:00"
+}
+###
+DELETE {{WebApiTask_HostAddress}}/api/drillblock/1
+
+###
+DELETE {{WebApiTask_HostAddress}}/api/drillblock/-1
+
+###
+
+GET {{WebApiTask_HostAddress}}/api/hole
+
+###
+
+POST {{WebApiTask_HostAddress}}/api/hole
+Content-Type: application/json
+
+{
+  "name": "London",
+  "drillBlockId": 2,
+  "depth": 0.2
+}
+
+###
+
+GET {{WebApiTask_HostAddress}}/api/hole/2
+
+###
+
+PUT {{WebApiTask_HostAddress}}/api/hole/2
+Content-Type: application/json
+
+{
+  "name": "Hawaii",
+  "drillBlockId": 2,
+  "depth": 0.2
+}
+###
+
+DELETE {{WebApiTask_HostAddress}}/api/hole/1
+
+###
+
+GET {{WebApiTask_HostAddress}}/api/drillblockpoint
+
+###
+
+POST {{WebApiTask_HostAddress}}/api/drillblockpoint
+Content-Type: application/json
+
+{
+  "drillBlockId": 1,
+  "sequence": 100,
+  "x": 25,
+  "y": 0.6,
+  "z": 18
+}
+
+###
+
+GET {{WebApiTask_HostAddress}}/api/drillblockpoint/1
+
+###
+
+PUT {{WebApiTask_HostAddress}}/api/drillblockpoint/2
+Content-Type: application/json
+
+{
+  "id" : 2,
+  "drillBlockId": 1,
+  "sequence": 10.5,
+  "x": 2,
+  "y": 10.6,
+  "z": 13.5
+}
+
+###
+
+DELETE {{WebApiTask_HostAddress}}/api/drillblockpoint/1
+
+###
+
+GET {{WebApiTask_HostAddress}}/api/holepoint
+
+###
+
+POST {{WebApiTask_HostAddress}}/api/holepoint
+Content-Type: application/json
+
+{
+  "holeId": 1,
+  "x": 0.6,
+  "y": 0.8,
+  "z": 0.4
+}
+
+###
+
+GET {{WebApiTask_HostAddress}}/api/holepoint/1
+
+###
+
+PUT {{WebApiTask_HostAddress}}/api/holepoint/2
+Content-Type: application/json
+
+{
+  "id": 2,
+  "holeId": 1,
+  "x": 0.6,
+  "y": 0.8,
+  "z": 0.4
+}
+
+###
+
+DELETE {{WebApiTask_HostAddress}}/api/holepoint/1
+
+###
